@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <span class="mdi mdi-view-dashboard" aria-hidden="true"></span>
+            <h1>Dashboard</h1>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Dashboard navigation">
+            <ul class="nav-list">
+                <li>
+                    <button class="nav-item active" type="button">
+                        <span class="mdi mdi-home" aria-hidden="true"></span>
+                        <span>Home</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="nav-item" type="button">
+                        <span class="mdi mdi-card-account-details-outline" aria-hidden="true"></span>
+                        <span>Profile</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="nav-item" type="button">
+                        <span class="mdi mdi-message-reply" aria-hidden="true"></span>
+                        <span>Messages</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="nav-item" type="button">
+                        <span class="mdi mdi-history" aria-hidden="true"></span>
+                        <span>History</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="nav-item" type="button">
+                        <span class="mdi mdi-calendar-check" aria-hidden="true"></span>
+                        <span>Tasks</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="nav-item" type="button">
+                        <span class="mdi mdi-account-group" aria-hidden="true"></span>
+                        <span>Communities</span>
+                    </button>
+                </li>
+            </ul>
+
+            <ul class="nav-list nav-list-bottom">
+                <li>
+                    <button class="nav-item" type="button">
+                        <span class="mdi mdi-cog" aria-hidden="true"></span>
+                        <span>Settings</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="nav-item" type="button">
+                        <span class="mdi mdi-face-agent" aria-hidden="true"></span>
+                        <span>Support</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="nav-item" type="button">
+                        <span class="mdi mdi-shield-check" aria-hidden="true"></span>
+                        <span>Privacy</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <form class="search-form">
+                <label class="search-label" for="site-search">
+                    <span class="mdi mdi-magnify" aria-hidden="true"></span>
+                </label>
+                <input id="site-search" name="site-search" type="search" placeholder="Search">
+            </form>
+
+            <button class="icon-button" type="button" aria-label="Notifications">
+                <span class="mdi mdi-bell-ring-outline" aria-hidden="true"></span>
+            </button>
+
+            <div class="profile-summary">
+                <div class="avatar avatar-small">RF</div>
+                <p>Raymond Fang</p>
+            </div>
+        </div>
+
+        <div class="header-bottom">
+            <div class="welcome">
+                <div class="avatar avatar-large">RF</div>
+                <div class="welcome-text">
+                    <p>Hi there,</p>
+                    <h2>Raymond Fang</h2>
+                </div>
+            </div>
+
+            <div class="header-actions">
+                <button class="action-button" type="button">New</button>
+                <button class="action-button" type="button">Upload</button>
+                <button class="action-button" type="button">Share</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="main-content">
+        <section class="projects-section">
+            <h2 class="section-title">Your Projects</h2>
+
+            <div class="projects-grid">
+                <article class="card project-card">
+                    <h3>Project 1</h3>
+                    <p>Temporary project text for project 1.</p>
+                    <div class="card-actions">
+                        <button class="icon-button" type="button" aria-label="Favorite project">
+                            <span class="mdi mdi-star-outline" aria-hidden="true"></span>
+                        </button>
+                        <button class="icon-button" type="button" aria-label="Preview project">
+                            <span class="mdi mdi-eye-outline" aria-hidden="true"></span>
+                        </button>
+                        <button class="icon-button" type="button" aria-label="Share project">
+                            <span class="mdi mdi-share-variant-outline" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="card project-card">
+                    <h3>Project 2</h3>
+                    <p>Temporary project text for project 2.</p>
+                    <div class="card-actions">
+                        <button class="icon-button" type="button" aria-label="Favorite project">
+                            <span class="mdi mdi-star-outline" aria-hidden="true"></span>
+                        </button>
+                        <button class="icon-button" type="button" aria-label="Preview project">
+                            <span class="mdi mdi-eye-outline" aria-hidden="true"></span>
+                        </button>
+                        <button class="icon-button" type="button" aria-label="Share project">
+                            <span class="mdi mdi-share-variant-outline" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="card project-card">
+                    <h3>Project 3</h3>
+                    <p>Temporary project text for project 3.</p>
+                    <div class="card-actions">
+                        <button class="icon-button" type="button" aria-label="Favorite project">
+                            <span class="mdi mdi-star-outline" aria-hidden="true"></span>
+                        </button>
+                        <button class="icon-button" type="button" aria-label="Preview project">
+                            <span class="mdi mdi-eye-outline" aria-hidden="true"></span>
+                        </button>
+                        <button class="icon-button" type="button" aria-label="Share project">
+                            <span class="mdi mdi-share-variant-outline" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="card project-card">
+                    <h3>Project 4</h3>
+                    <p>Temporary project text for project 4.</p>
+                    <div class="card-actions">
+                        <button class="icon-button" type="button" aria-label="Favorite project">
+                            <span class="mdi mdi-star-outline" aria-hidden="true"></span>
+                        </button>
+                        <button class="icon-button" type="button" aria-label="Preview project">
+                            <span class="mdi mdi-eye-outline" aria-hidden="true"></span>
+                        </button>
+                        <button class="icon-button" type="button" aria-label="Share project">
+                            <span class="mdi mdi-share-variant-outline" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="card project-card">
+                    <h3>Project 5</h3>
+                    <p>Temporary project text for project 5.</p>
+                    <div class="card-actions">
+                        <button class="icon-button" type="button" aria-label="Favorite project">
+                            <span class="mdi mdi-star-outline" aria-hidden="true"></span>
+                        </button>
+                        <button class="icon-button" type="button" aria-label="Preview project">
+                            <span class="mdi mdi-eye-outline" aria-hidden="true"></span>
+                        </button>
+                        <button class="icon-button" type="button" aria-label="Share project">
+                            <span class="mdi mdi-share-variant-outline" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="card project-card">
+                    <h3>Project 6</h3>
+                    <p>Temporary project text for project 6.</p>
+                    <div class="card-actions">
+                        <button class="icon-button" type="button" aria-label="Favorite project">
+                            <span class="mdi mdi-star-outline" aria-hidden="true"></span>
+                        </button>
+                        <button class="icon-button" type="button" aria-label="Preview project">
+                            <span class="mdi mdi-eye-outline" aria-hidden="true"></span>
+                        </button>
+                        <button class="icon-button" type="button" aria-label="Share project">
+                            <span class="mdi mdi-share-variant-outline" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Right column -->
+    <aside class="right-panel">
+        <section>
+            <h2 class="section-title">Announcements</h2>
+            <div class="card panel-card">
+                <article class="announcement-item">
+                    <h3>Update 1 Announcement</h3>
+                    <p>Temporary announcement text for update 1.</p>
+                </article>
+
+                <article class="announcement-item">
+                    <h3>Update 2 Announcement</h3>
+                    <p>Temporary announcement text for update 2.</p>
+                </article>
+
+                <article class="announcement-item">
+                    <h3>Update 3 Announcement</h3>
+                    <p>Temporary announcement text for update 3.</p>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Trending</h2>
+            <div class="card panel-card">
+                <div class="trend-item">
+                    <div class="avatar avatar-trend">T1</div>
+                    <div>
+                        <p class="trend-name">@test1</p>
+                        <p class="trend-copy">Temporary trending text</p>
+                    </div>
+                </div>
+
+                <div class="trend-item">
+                    <div class="avatar avatar-trend">T2</div>
+                    <div>
+                        <p class="trend-name">@test2</p>
+                        <p class="trend-copy">Temporary trending text</p>
+                    </div>
+                </div>
+
+                <div class="trend-item">
+                    <div class="avatar avatar-trend">T3</div>
+                    <div>
+                        <p class="trend-name">@test3</p>
+                        <p class="trend-copy">Temporary trending text</p>
+                    </div>
+                </div>
+
+                <div class="trend-item">
+                    <div class="avatar avatar-trend">T4</div>
+                    <div>
+                        <p class="trend-name">@test4</p>
+                        <p class="trend-copy">Temporary trending text</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </aside>
+</body>
+</html>

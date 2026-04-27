@@ -1,0 +1,363 @@
+/* Reset default browser spacing so the layout starts from a clean slate. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --sidebar-bg: #163f72;
+    --sidebar-text: #d9e7f5;
+    --sidebar-hover: #234f89;
+    --sidebar-active: #2d5d9d;
+    --page-bg: #e8eef5;
+    --card-bg: #ffffff;
+    --card-border: #f0b429;
+    --text-main: #22303c;
+    --text-muted: #5d6d7e;
+    --search-bg: #dce6f0;
+    --shadow: 0 2px 8px rgba(15, 23, 42, 0.12);
+    --font-stack: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+/* Grid controls the big picture layout. */
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 260px minmax(0, 1fr) 300px;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "sidebar header header"
+        "sidebar main right";
+    font-family: var(--font-stack);
+    background-color: var(--page-bg);
+    color: var(--text-main);
+}
+
+/* Sidebar */
+.sidebar {
+    grid-area: sidebar;
+    background-color: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 2.5rem;
+}
+
+.sidebar-brand h1 {
+    font-size: 1.9rem;
+    line-height: 1.1;
+}
+
+.sidebar-brand .mdi {
+    font-size: 2.2rem;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.nav-list-bottom {
+    margin-top: auto;
+}
+
+/* Each sidebar option is a button so we can remove fake links. */
+.nav-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 0.75rem;
+    border: none;
+    border-radius: 0.75rem;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: left;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.nav-item .mdi {
+    font-size: 1.5rem;
+}
+
+.nav-item:hover,
+.nav-item:focus-visible,
+.nav-item.active {
+    background-color: var(--sidebar-hover);
+    color: #ffffff;
+}
+
+.nav-item:active {
+    background-color: var(--sidebar-active);
+}
+
+/* Header */
+.header {
+    grid-area: header;
+    background-color: var(--card-bg);
+    padding: 1rem 2rem;
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 1.25rem;
+    box-shadow: var(--shadow);
+}
+
+.header-top {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-form {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.search-label {
+    font-size: 1.5rem;
+    color: var(--text-main);
+}
+
+.search-form input {
+    width: 100%;
+    border: none;
+    border-radius: 999px;
+    padding: 0.65rem 1rem;
+    background-color: var(--search-bg);
+    font: inherit;
+}
+
+.profile-summary {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 700;
+}
+
+.header-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.welcome {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.welcome-text p {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+}
+
+.welcome-text h2 {
+    font-size: 1.6rem;
+}
+
+.header-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.action-button {
+    border: none;
+    border-radius: 999px;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--sidebar-bg);
+    color: #ffffff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.action-button:hover,
+.action-button:focus-visible {
+    background-color: var(--sidebar-hover);
+}
+
+.action-button:active {
+    background-color: var(--sidebar-active);
+}
+
+/* Shared small pieces */
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.avatar-small {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #f0b429;
+    color: var(--sidebar-bg);
+}
+
+.avatar-large {
+    width: 4.25rem;
+    height: 4.25rem;
+    background-color: #f0b429;
+    color: var(--sidebar-bg);
+    font-size: 1.4rem;
+}
+
+.avatar-trend {
+    width: 3rem;
+    height: 3rem;
+    background-color: #d5e2ef;
+    color: var(--sidebar-bg);
+}
+
+.icon-button {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--text-main);
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.icon-button:hover,
+.icon-button:focus-visible {
+    background-color: var(--search-bg);
+}
+
+.section-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow);
+}
+
+/* Main column */
+.main-content {
+    grid-area: main;
+    min-width: 0;
+    padding: 1.5rem;
+    display: flex;
+}
+
+.projects-section {
+    flex: 1;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.project-card {
+    padding: 1.5rem;
+    border-left: 8px solid var(--card-border);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 0.75rem;
+}
+
+.project-card h3 {
+    font-size: 1.15rem;
+}
+
+.project-card p,
+.announcement-item p,
+.trend-copy {
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+/* Right column */
+.right-panel {
+    grid-area: right;
+    min-width: 0;
+    padding: 1.5rem 1.5rem 1.5rem 0;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.right-panel > section {
+    min-height: 0;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.panel-card {
+    padding: 1.25rem;
+}
+
+.announcement-item + .announcement-item {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #d8e1ea;
+}
+
+.announcement-item h3 {
+    font-size: 0.98rem;
+    margin-bottom: 0.25rem;
+}
+
+.trend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+.trend-item + .trend-item {
+    margin-top: 1rem;
+}
+
+.trend-name {
+    font-weight: 700;
+    margin-bottom: 0.15rem;
+}
